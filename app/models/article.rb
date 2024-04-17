@@ -7,6 +7,8 @@ class Article < ApplicationRecord
   def self.search(search)
     if search
       where('title LIKE ?', "%#{search}%")
+      .or(Article.where('content LIKE ?', "%#{search}%")
+      .or(Tag.where('title LIKE ?', "%#{search}%")))
     else
       all
     end
