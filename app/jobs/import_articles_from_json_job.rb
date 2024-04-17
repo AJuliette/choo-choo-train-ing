@@ -16,9 +16,11 @@ class ImportArticlesFromJsonJob < ApplicationJob
         content: article['html']
       )
 
-      tags_attributes.each do |tag_attributes|
-        article_object.tags.find_or_initialize_by(tag_attributes)
+      tags = tags_attributes.each_with_object([]) do |tag_attributes, array|
+        array << Tag.find_or_initialize_by(title: tag_attributes[:title])
       end
+
+      article_object.tags = tags
 
       article_object.save
     end
