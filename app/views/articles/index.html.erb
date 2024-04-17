@@ -8,6 +8,9 @@
 
 <ul>
     <% @articles.each do |article| %>
-        <li><%= article.title %></li>
+        <li>
+            <%= image_tag article.image_url %>
+            <%= article.title %>
+        </li>
     <% end %>
 </ul>

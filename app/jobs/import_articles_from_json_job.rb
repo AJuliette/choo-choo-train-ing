@@ -13,7 +13,8 @@ class ImportArticlesFromJsonJob < ApplicationJob
 
       article_object = Article.new(
         title: article['title'],
-        content: article['html']
+        content: article['html'],
+        image_url: article['feature_image']
       )
 
       tags = tags_attributes.each_with_object([]) do |tag_attributes, array|
