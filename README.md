@@ -8,6 +8,10 @@
 
 7.1.3
 
+* Installing the libraries
+
+run `bundle/install`
+
 * Database configuration
 
 Database used is postgresql.
