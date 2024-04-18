@@ -16,7 +16,7 @@ run `bundle/install`
 
 Database used is postgresql.
 
-Create a `.env` file at the root of the folder and add your pg user (PGUSER) and password (PGPASSWORD) variables.
+Create a `.env` file at the root of the folder and add your pg user `PGUSER` and password `PGPASSWORD` variables.
 
 * Database creation
 
@@ -31,3 +31,7 @@ And in the console: `ImportArticlesFromJsonJob.perform_now('articles.json')`
 * Launching the app locally
 
 run `bin/rails server`
+
+* Design
+
+Design and its source code from the ✨ amazing ✨ Tania Rascia: [Design for Developers: Specific Steps to Improve Your Website Design](https://www.taniarascia.com/design-for-developers/)
