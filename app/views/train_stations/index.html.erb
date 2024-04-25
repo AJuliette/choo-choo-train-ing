@@ -1,8 +1,8 @@
-<h1>Articles</h1>
+<h1>Gares</h1>
 
 <div class="container">
     <%= form_with url: "/", method: :get do |form| %>
-    <%= form.label :search, "J'aimerais savoir:" %>
+    <%= form.label :search, "J'aimerais voir:" %>
     <%= form.search_field :query %>
     <%= form.submit "Recherche", class: "button" %>
     <% end %>
@@ -10,11 +10,11 @@
 
 <div class="container">
     <div class="flex-container">
-        <% @articles.each do |article| %>
+        <% @train_stations.each do |train_station| %>
             <div class="card">
-                <div class="card-image" style="background-image: url('<%= article.image_url %>')"></div>
+                <div class="card-image" style="background-image: url('<%= train_station.image_url %>')"></div>
                 <div class="card-content">
-                    <p><%= article.title %></p>
+                    <p><%= train_station.name %></p>
                 </div>
             </div>
         <% end %>

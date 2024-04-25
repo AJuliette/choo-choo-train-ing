@@ -26,7 +26,7 @@ run `bin/rails db:create db:migrate`
 
 run `bin/rails console`
 
-And in the console: `ImportArticlesFromJsonJob.perform_now('articles.json')`
+And in the console:
 
 * Launching the app locally
 
